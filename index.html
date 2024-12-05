@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplex Method Solver</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simplex Method Solver</h1>
+        <p>Enter your problem in the format below, and the system will solve it:</p>
+        <pre>
+Example:
+Solve the following problem using the simplex method
+Maximize
+  P = 3x + 5y
+Subject to
+  x ≤ 4
+  2y ≤ 12
+  3x + 2y ≤ 18
+  x ≥ 0, y ≥ 0
+        </pre>
+
+        <form action="/solve" method="post">
+            <textarea name="problem" rows="10" placeholder="Paste your problem here..." required></textarea>
+            <button type="submit" class="btn">Solve</button>
+        </form>
+    </div>
+</body>
+</html>
